@@ -1,0 +1,198 @@
+{
+  "patcher" : {
+    "fileversion" : 1,
+    "appversion" : {
+      "major" : 8,
+      "minor" : 6,
+      "revision" : 4,
+      "architecture" : "arm64",
+      "modernui" : 1
+    },
+    "classnamespace" : "box",
+    "rect" : [ 50.0, 50.0, 400.0, 300.0 ],
+    "bglocked" : 0,
+    "openinpresentation" : 1,
+    "default_fontsize" : 12.0,
+    "default_fontface" : 0,
+    "default_fontname" : "Arial",
+    "gridonopen" : 1,
+    "gridsize" : [ 15.0, 15.0 ],
+    "gridsnaponopen" : 1,
+    "objectsnaponopen" : 1,
+    "statusbarvisible" : 2,
+    "tallnewobj" : 0,
+    "boxanimatetime" : 200,
+    "enablehscroll" : 1,
+    "enablevscroll" : 1,
+    "devicewidth" : 0.0,
+    "description" : "Ableton2ML Compatible Device for Max 8.6.4",
+    "digest" : "00000000000000000000000000000000",
+    "autosave" : 0,
+    "views" : [ {
+      "presentation" : 1,
+      "presentation_rect" : [ 0.0, 0.0, 400.0, 300.0 ],
+      "size" : [ 400.0, 300.0 ],
+      "bglocked" : 0,
+      "openinpresentation" : 1,
+      "default_fontsize" : 12.0,
+      "default_fontface" : 0,
+      "default_fontname" : "Arial",
+      "gridonopen" : 1,
+      "gridsize" : [ 15.0, 15.0 ],
+      "gridsnaponopen" : 1,
+      "objectsnaponopen" : 1,
+      "statusbarvisible" : 2,
+      "tallnewobj" : 0,
+      "boxanimatetime" : 200,
+      "enablehscroll" : 1,
+      "enablevscroll" : 1,
+      "devicewidth" : 0.0,
+      "description" : "",
+      "autosave" : 0
+    } ],
+    "dependency_cache" : [ ],
+    "autosave_objects" : [ ],
+    "object" : [
+      {
+        "box" : {
+          "id" : "obj-1",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "loadbang",
+          "patching_rect" : [ 50.0, 50.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-2",
+          "maxclass" : "comment",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "Ableton2ML Compatible Device",
+          "patching_rect" : [ 50.0, 100.0, 200.0, 22.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 50.0, 50.0, 200.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-3",
+          "maxclass" : "comment",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "Max for Live 8.6.4 ARM64",
+          "patching_rect" : [ 50.0, 130.0, 180.0, 22.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 50.0, 80.0, 180.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-4",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "button",
+          "patching_rect" : [ 50.0, 180.0, 24.0, 24.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 50.0, 130.0, 24.0, 24.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-5",
+          "maxclass" : "comment",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "Test Button",
+          "patching_rect" : [ 80.0, 180.0, 80.0, 22.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 80.0, 130.0, 80.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-6",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "print",
+          "patching_rect" : [ 50.0, 220.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-7",
+          "maxclass" : "comment",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "Debug Output",
+          "patching_rect" : [ 110.0, 220.0, 100.0, 22.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 110.0, 170.0, 100.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-8",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "live.thisdevice",
+          "patching_rect" : [ 250.0, 180.0, 100.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-9",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "live.parameter @name \"Test Param\" @min 0 @max 100 @default 50",
+          "patching_rect" : [ 250.0, 220.0, 200.0, 22.0 ]
+        }
+      }
+    ],
+    "dependency_cache" : [ ],
+    "autosave_objects" : [ ],
+    "lines" : [
+      {
+        "patchline" : {
+          "id" : "line-1",
+          "source" : [ "obj-1", 0 ],
+          "destination" : [ "obj-2", 0 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-2",
+          "source" : [ "obj-1", 0 ],
+          "destination" : [ "obj-3", 0 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-3",
+          "source" : [ "obj-4", 0 ],
+          "destination" : [ "obj-6", 0 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      }
+    ]
+  }
+}

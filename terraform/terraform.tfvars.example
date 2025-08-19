@@ -1,0 +1,35 @@
+# Example terraform.tfvars file for Ableton2ML
+# Copy this file to terraform.tfvars and update the values
+
+# Required: Your Google Cloud Project ID
+project_id = "your-google-cloud-project-id"
+
+# Required: Your Hugging Face API Token
+hf_token = "hf_your_huggingface_token_here"
+
+# Optional: Customize these values as needed
+region = "us-central1"
+zone   = "us-central1-a"
+
+# Environment configuration
+environment = "dev"
+
+# Instance configuration
+instance_machine_type = "n1-standard-4"
+enable_gpu           = false
+gpu_type            = "nvidia-tesla-t4"
+gpu_count           = 1
+disk_size_gb        = 50
+
+# Service configuration
+enable_cloud_run = true
+enable_notebook  = false
+
+# Repository configuration
+repository_url = "https://github.com/your-repo/ableton2ml.git"
+branch         = "main"
+
+# Notebook access (if enable_notebook = true)
+notebook_owners = [
+  "user:your-email@example.com"
+]

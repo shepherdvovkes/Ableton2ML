@@ -1,0 +1,428 @@
+{
+  "patcher" : {
+    "fileversion" : 1,
+    "appversion" : {
+      "major" : 8,
+      "minor" : 6,
+      "revision" : 4,
+      "architecture" : "arm64",
+      "modernui" : 1
+    },
+    "classnamespace" : "box",
+    "rect" : [ 50.0, 50.0, 800.0, 600.0 ],
+    "bglocked" : 0,
+    "openinpresentation" : 1,
+    "default_fontsize" : 12.0,
+    "default_fontface" : 0,
+    "default_fontname" : "Arial",
+    "gridonopen" : 1,
+    "gridsize" : [ 15.0, 15.0 ],
+    "gridsnaponopen" : 1,
+    "objectsnaponopen" : 1,
+    "statusbarvisible" : 2,
+    "tallnewobj" : 0,
+    "boxanimatetime" : 200,
+    "enablehscroll" : 1,
+    "enablevscroll" : 1,
+    "devicewidth" : 0.0,
+    "description" : "Ableton2ML Full Device with Google Magenta Integration",
+    "digest" : "00000000000000000000000000000000",
+    "autosave" : 0,
+    "views" : [ {
+      "presentation" : 1,
+      "presentation_rect" : [ 0.0, 0.0, 800.0, 600.0 ],
+      "size" : [ 800.0, 600.0 ],
+      "bglocked" : 0,
+      "openinpresentation" : 1,
+      "default_fontsize" : 12.0,
+      "default_fontface" : 0,
+      "default_fontname" : "Arial",
+      "gridonopen" : 1,
+      "gridsize" : [ 15.0, 15.0 ],
+      "gridsnaponopen" : 1,
+      "objectsnaponopen" : 1,
+      "statusbarvisible" : 2,
+      "tallnewobj" : 0,
+      "boxanimatetime" : 200,
+      "enablehscroll" : 1,
+      "enablevscroll" : 1,
+      "devicewidth" : 0.0,
+      "description" : "",
+      "autosave" : 0
+    } ],
+    "dependency_cache" : [ ],
+    "autosave_objects" : [ ],
+    "object" : [
+      {
+        "box" : {
+          "id" : "obj-1",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 3,
+          "outlettype" : [ "list", "int", "int" ],
+          "text" : "midiin",
+          "patching_rect" : [ 50.0, 50.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-2",
+          "maxclass" : "newobj",
+          "numinlets" : 3,
+          "numoutlets" : 1,
+          "outlettype" : [ "list" ],
+          "text" : "midiout",
+          "patching_rect" : [ 50.0, 500.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-3",
+          "maxclass" : "comment",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "Ableton2ML Full Device",
+          "patching_rect" : [ 50.0, 100.0, 150.0, 22.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 50.0, 50.0, 150.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-4",
+          "maxclass" : "comment",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "Google Magenta AI Integration",
+          "patching_rect" : [ 50.0, 130.0, 180.0, 22.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 50.0, 80.0, 180.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-5",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "live.thisdevice",
+          "patching_rect" : [ 50.0, 200.0, 100.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-6",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "float" ],
+          "text" : "live.parameter @name \"Creativity\" @min 0 @max 100 @default 50",
+          "patching_rect" : [ 50.0, 250.0, 200.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-7",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "float" ],
+          "text" : "live.parameter @name \"Tempo\" @min 60 @max 200 @default 120",
+          "patching_rect" : [ 50.0, 300.0, 200.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-8",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "int" ],
+          "text" : "live.parameter @name \"Auto Generate\" @type bool @default 0",
+          "patching_rect" : [ 50.0, 350.0, 200.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-9",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "button",
+          "patching_rect" : [ 300.0, 200.0, 24.0, 24.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 300.0, 150.0, 24.0, 24.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-10",
+          "maxclass" : "comment",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "Generate Melody",
+          "patching_rect" : [ 330.0, 200.0, 100.0, 22.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 330.0, 150.0, 100.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-11",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "random 12",
+          "patching_rect" : [ 300.0, 250.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-12",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "int" ],
+          "text" : "+ 60",
+          "patching_rect" : [ 400.0, 250.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-13",
+          "maxclass" : "newobj",
+          "numinlets" : 2,
+          "numoutlets" : 1,
+          "outlettype" : [ "list" ],
+          "text" : "pack",
+          "patching_rect" : [ 500.0, 250.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-14",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "int" ],
+          "text" : "100",
+          "patching_rect" : [ 500.0, 280.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-15",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "int" ],
+          "text" : "1",
+          "patching_rect" : [ 500.0, 310.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-16",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "metro 2000",
+          "patching_rect" : [ 300.0, 350.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-17",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "print",
+          "patching_rect" : [ 600.0, 250.0, 50.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-18",
+          "maxclass" : "comment",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "Debug Output",
+          "patching_rect" : [ 660.0, 250.0, 100.0, 22.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 600.0, 280.0, 100.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-19",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "url",
+          "patching_rect" : [ 300.0, 400.0, 100.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-20",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "json",
+          "patching_rect" : [ 300.0, 450.0, 100.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-21",
+          "maxclass" : "comment",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "Google Magenta API",
+          "patching_rect" : [ 300.0, 480.0, 150.0, 22.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 300.0, 430.0, 150.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-22",
+          "maxclass" : "newobj",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "live.object",
+          "patching_rect" : [ 500.0, 400.0, 100.0, 22.0 ]
+        }
+      },
+      {
+        "box" : {
+          "id" : "obj-23",
+          "maxclass" : "comment",
+          "numinlets" : 1,
+          "numoutlets" : 1,
+          "outlettype" : [ "bang" ],
+          "text" : "Live API Integration",
+          "patching_rect" : [ 500.0, 430.0, 150.0, 22.0 ],
+          "presentation" : 1,
+          "presentation_rect" : [ 500.0, 380.0, 150.0, 22.0 ]
+        }
+      }
+    ],
+    "dependency_cache" : [ ],
+    "autosave_objects" : [ ],
+    "lines" : [
+      {
+        "patchline" : {
+          "id" : "line-1",
+          "source" : [ "obj-1", 0 ],
+          "destination" : [ "obj-2", 0 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-2",
+          "source" : [ "obj-1", 1 ],
+          "destination" : [ "obj-2", 1 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-3",
+          "source" : [ "obj-1", 2 ],
+          "destination" : [ "obj-2", 2 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-4",
+          "source" : [ "obj-9", 0 ],
+          "destination" : [ "obj-11", 0 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-5",
+          "source" : [ "obj-11", 0 ],
+          "destination" : [ "obj-12", 0 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-6",
+          "source" : [ "obj-12", 0 ],
+          "destination" : [ "obj-13", 0 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-7",
+          "source" : [ "obj-14", 0 ],
+          "destination" : [ "obj-13", 1 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-8",
+          "source" : [ "obj-15", 0 ],
+          "destination" : [ "obj-13", 2 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-9",
+          "source" : [ "obj-13", 0 ],
+          "destination" : [ "obj-17", 0 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-10",
+          "source" : [ "obj-8", 0 ],
+          "destination" : [ "obj-16", 0 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      },
+      {
+        "patchline" : {
+          "id" : "line-11",
+          "source" : [ "obj-16", 0 ],
+          "destination" : [ "obj-11", 0 ],
+          "hidden" : 0,
+          "midpoints" : [ ]
+        }
+      }
+    ]
+  }
+}
